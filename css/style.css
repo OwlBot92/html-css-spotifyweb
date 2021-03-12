@@ -319,10 +319,13 @@ nav{
 }
 
 
-/* layover effect on image */
+/* layover effect on image styling*/
 .song-box .img-container{
     position: relative;
 }
+
+/* IMPORTANTE */
+/* sistemare cose ridondanti */
 .show-layover{
    /*  max-width: 430px; */
     z-index: -1;
@@ -407,7 +410,6 @@ footer{
     align-items: center;
     width: 100%;
     height: 85px;
-    /* TEST */
     background-color: #282828;
 }
 
@@ -558,7 +560,7 @@ footer{
 /* ----- MEDIA QUERIES ----- */
 
 
-/* MEDIA SOTTO i 768px */
+/* MEDIA tra 768 e 992 px */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .song-box{
         width: calc(100% / 4);
@@ -568,6 +570,7 @@ footer{
         justify-content: flex-start;
     }
 }
+/* MEDIA  tra 540 e 768 px */
 @media screen and (min-width: 540px) and (max-width: 768px){
     .song-box{
         width: calc(100% / 2);
@@ -577,10 +580,8 @@ footer{
         justify-content: flex-start;
     }
 }
-/* media per le scritte nella navbar */
-@media screen and (max-width: 768px){
 
-}
+
 
 @media screen and (max-width: 540px){
     .song-box{
@@ -590,13 +591,11 @@ footer{
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-
     /* changes in the navbar when under 540px */
     .ul-mini-nav li{
         padding: 0;
         justify-content: center;
     }
-   
     .songs-content,
     .upgrade{
         width: calc(100% - 60px);
@@ -626,11 +625,9 @@ footer{
     .hidden-xs{
         display: none;
     }
-
     .ul-mini-nav li{
         border:none;
     }
-    
     .flexed-mini-footer{
         display: flex;
         flex-direction: column;
@@ -659,7 +656,7 @@ footer{
     }
 }
 
-
+/* SBAGLIATO? */
 /* media appositamente creata per dare un aspetto decente su dispositivi mobili. ci sono le scrollbar */
 @media screen and (max-width: 475px){
     main{
