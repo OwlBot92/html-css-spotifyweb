@@ -1,3 +1,5 @@
+/* aggiungere effetto hover alle icone vicino al volume  */
+/* sistemare font size degli h nel main che scrolla */
 *{
     margin: 0;
     padding: 0;
@@ -302,8 +304,6 @@ nav{
     margin: auto;
     display: block;
 }
-
-
 .songs-list{
     display: flex;
     justify-content: flex-start;
@@ -311,15 +311,23 @@ nav{
     padding-left: 7.5px;
 }
 
+.songs-content .created-for h3,
+.songs-content .created-for h5,
+.songs-content .popular-artists h3,
+.songs-content .popular-artists h5{
+    padding-left: 15px;
+}
+
+
 /* layover effect on image */
 .song-box .img-container{
     position: relative;
 }
 .show-layover{
-    max-width: 430px;
+   /*  max-width: 430px; */
     z-index: -1;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -327,7 +335,11 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,.4);
+    /* background-color: rgba(0,0,0,.4); */
+}
+.img-container:hover img{
+    opacity: .2;
+    cursor: pointer;
 }
 .circular-layover{
     border-radius: 50%;
@@ -335,7 +347,7 @@ nav{
 .show-layover .fa-play-circle{
     font-size: 45px;
 }
-.song-box:hover .show-layover{
+.img-container:hover .show-layover{
     z-index: 1;
     cursor: pointer;
 }
@@ -648,7 +660,7 @@ footer{
 }
 
 
-/* media appositamente creata per dare un aspetto decente su dispositivi mobili. ci sono le scroll  */
+/* media appositamente creata per dare un aspetto decente su dispositivi mobili. ci sono le scrollbar */
 @media screen and (max-width: 475px){
     main{
         width: 475px;
