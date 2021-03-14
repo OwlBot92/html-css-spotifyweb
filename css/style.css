@@ -1,5 +1,4 @@
-/* aggiungere effetto hover alle icone vicino al volume  */
-/* sistemare font size degli h nel main che scrolla */
+
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +12,9 @@ body{
 /* COMMON */
 .text-grey{
     color: #717171;
+}
+.text-white{
+    color: white;
 }
 .text-hover:hover{
     color: #d2d2d2;
@@ -29,9 +31,6 @@ body{
 }
 .pointer{
     cursor: pointer;
-}
-.text-white{
-    color: white;
 }
 .align-center{
     display: flex;
@@ -97,14 +96,14 @@ nav{
     display: none;
 }
 .logo-box img{
-    width: 150px;
+    width: 110px;
 }
 
 
 /* mini-nav styling 33html*/
 /* SVG styling */
 .ul-mini-nav svg{
-    width: 25px;
+    width: 22px;
     margin-right: 5px; 
 }
 .ul-mini-nav svg path{
@@ -121,7 +120,7 @@ nav{
 
 .ul-mini-nav li a{
     font-weight: 700;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* add-playlist styling 75html*/
@@ -133,14 +132,12 @@ nav{
     overflow: hidden;
     padding-top: 15px;
     min-height: 55px;
-    /* TEST */
-   /*  background-color: red; */
-   background-color: black;
+    background-color: black;
 }
 .add-playlist h3{
-    font-size: 16px;
+    font-size: 14px;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 800;
 }
 
@@ -149,10 +146,10 @@ nav{
     padding-bottom: 10px;
     color: grey;
 }
-.add-button a:hover #plus-symbol{
+.add-button a:hover #plus-symbol-box{
     background-color: lightgray;
 }
-#plus-symbol{
+#plus-symbol-box{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,28 +158,29 @@ nav{
     background-color: grey;
 }
 
-#plus-symbol span{
+#plus-symbol-box span{
     font-size: 45px;
     font-weight: 400;
     color: black;
 }
 .add-button .add-text{
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 700;
     margin-left: 5px;
 }
 
 
-/* add playlist 75html */
+/* add playlist 87html */
 .ul-add-playlist{
     height: calc(100% - 70px);
     overflow-y: auto;
 }
 
 .ul-add-playlist li{
-    padding-bottom: 15px;
-    font-size: 13px;
-    font-weight: 700;
+    letter-spacing: .3px;
+    padding-bottom: 18px;
+    font-size: 11px;
+    font-weight: 800;
 }
 .ul-add-playlist li a{
     color: grey;
@@ -191,14 +189,11 @@ nav{
 
 /* mini-footer style 99html*/
 .mini-footer{
-    /* TEST */
-    /* background-color:slateblue; */
     background-color: black;
-
 }
 
 .install-container{
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     border-bottom: 2px solid grey;
 }   
 .install-container a{
@@ -207,39 +202,33 @@ nav{
     color: grey;
 }
 .install-container i{
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 4px;
 }
 .user-profile{
-    padding-top: 7px;
-    padding-bottom: 4px;
+    padding-top: 10px;
+    padding-bottom: 6px;
 }
 .user-profile a{
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-}
-.user-profile i{
-    font-size: 20px;
-    margin-right: 4px;
-    background-color: grey;
-    border-radius: 50%;
 }
 .profile-svg-box{
     border-radius: 50%;
     background-color: grey;
-    height: 24px;
-    width: 24px;
+    height: 22px;
+    width: 22px;
     margin-right: 10px;
     justify-content: center;
     overflow: hidden;
 }
 .profile-svg-box img{
-    width: 21px;
+    width: 19.5px;
 }
 
 
-/* fixed custom bar 343html*/
+/* fixed custom bar 364html*/
 .upgrade{
     display: flex;
     align-items: center;
@@ -269,7 +258,7 @@ nav{
     margin-right: 20px;
 }
 
-/* Songs content 118html*/
+/* Songs content 116html*/
 .songs-content{
     height: calc(100vh - 85px);
     width: calc(100% - 200px);
@@ -278,7 +267,7 @@ nav{
     padding-top: 100px;
     overflow-y: auto;
 }
-/* song content ul 122html */
+/* song content ul 119html */
 .songs-content ul{
     justify-content: center;
     flex-wrap: wrap;
@@ -290,23 +279,21 @@ nav{
 .songs-content ul li a{
     color: grey;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 11px;
 }
-.song-nav ul:first-child:hover{
-    cursor: pointer;
-}
+
 .active-under::after{
     content: "";
     background-color:#1db954;
     height: 2px;
-    width: 30%;
+    width: 35%;
     margin: auto;
     display: block;
 }
 .songs-list{
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     padding-right: 7.5px;
     padding-left: 7.5px;
 }
@@ -323,29 +310,16 @@ nav{
 .song-box .img-container{
     position: relative;
 }
-
-/* IMPORTANTE */
-/* sistemare cose ridondanti */
 .show-layover{
-   /*  max-width: 430px; */
     z-index: -1;
-    /* height: 100%;
-    width: 100%; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: rgba(0,0,0,.4); */
 }
 .img-container:hover img{
-    opacity: .2;
+    opacity: .3;
     cursor: pointer;
-}
-.circular-layover{
-    border-radius: 50%;
 }
 .show-layover .fa-play-circle{
     font-size: 45px;
@@ -361,8 +335,14 @@ nav{
     width: calc(100% / 6);
     text-align: center;
 }
+.song-box h4{
+    font-size: 14px;
+    font-weight: 800;
+}
 .song-box h5{
     padding-top: 5px;
+    font-size: 12px;
+    font-weight: 800;
 }
 .padder-img{
     padding: 10px;
@@ -373,23 +353,28 @@ nav{
 }
 
 .recently-played h3{
-    padding-top: 25px;
-    padding-bottom: 15px;
     padding-left: 15px;
 }
 
+.recently-played h3, 
+.created-for h3, 
+.popular-artists h3{
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    color: white;
+}
 
 /* created-for 246html*/
 .created-for h3,
 .popular-artists h3{
-    padding-top: 25px;
-    padding-bottom: 15px;
     color: white;
 }
 .created-for h5,
 .popular-artists h5{
     color: grey;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 .created-for .songs-list,
 .popular-artists .songs-list{
@@ -436,6 +421,9 @@ footer{
     color: grey;
     font-weight: 800;
     padding-right: 30px;
+}
+.footer-song-info h6:hover{
+    text-decoration: underline;
 }
 .fa-heart,
 .fa-folder{
@@ -696,3 +684,6 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+
+/* completed */
